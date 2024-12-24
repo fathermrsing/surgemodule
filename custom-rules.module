@@ -1,0 +1,10 @@
+#!name=我的自定义规则托管github
+#!desc=自定义规则模块
+
+[Rule]
+DOMAIN,api-pro.mumu.163.com,REJECT
+IP-CIDR,129.150.40.179/32,DIRECT
+DOMAIN-SUFFIX,zlf.co,DIRECT
+DOMAIN-SUFFIX,netease.com,REJECT
+IP-CIDR,192.168.3.0/24,DIRECT
+IP-CIDR,192.168.8.0/24,DIRECT
