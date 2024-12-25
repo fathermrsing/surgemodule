@@ -1,5 +1,6 @@
 #!name=我的自定义规则托管github
 #!desc=自定义规则模块
+#!category=ZerOTier本地组网屏蔽
 
 [Rule]
 DOMAIN,api-pro.mumu.163.com,REJECT
