@@ -12,7 +12,7 @@ function main(config) {
     {  
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/txnews.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      name: "微信代理",
+      name: "wechatproxy",
       type: "select",
       proxies: ["AUTO","wechat-api"],
     }, 
@@ -65,7 +65,7 @@ function main(config) {
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       filter: "(?i)微信|wechat",
-      name: "wechat-api",
+      name: "tencent",
       type: "url-test",
       interval: 300,
     },
@@ -245,7 +245,7 @@ function main(config) {
     "RULE-SET,geolocation-!cn,PROXY",
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
-    "RULE-SET,wechatapi,微信代理",
+    "RULE-SET,tentcent,wechatproxy",
     "MATCH,PROXY",
   ];
   return config;
