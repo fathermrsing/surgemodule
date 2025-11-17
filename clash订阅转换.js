@@ -22,7 +22,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "PROXY",
       type: "select",
-      proxies: ["节点选择", "HK 节点选择", "SG 节点选择", "JP 节点选择", "US 节点选择","DIRECT"],
+      proxies: [ "HK 节点选择", "SG 节点选择", "JP 节点选择", "US 节点选择","DIRECT","节点选择"],
     },    
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png",
