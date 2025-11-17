@@ -179,15 +179,15 @@ function main(config) {
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
     copilot: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml",
       path: "./ruleset/copilot.yaml",
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
+      type: "http",
     },
     claude: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml",
@@ -195,7 +195,7 @@ function main(config) {
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
+      type: "http",
     },
     bard: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml",
@@ -206,39 +206,39 @@ function main(config) {
       type: "http",
     },
     openai: {
-      url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"，
+      url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml",
       path: "./ruleset/openai.yaml",
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
     steam: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml",
       path: "./ruleset/steam.yaml",
       behavior: "classical",
       interval: 86400,  
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
   });
 
   config["rules"] = [
-    "RULE-SET,private,DIRECT"，
+    "RULE-SET,private,DIRECT",
     "RULE-SET,bing,AIGC",
-    "RULE-SET,copilot,AIGC"，
-    "RULE-SET,bard,AIGC"，
-    "RULE-SET,openai,AIGC"，
-    "RULE-SET,claude,AIGC"，
-    "RULE-SET,steam,PROXY"，
-    "RULE-SET,telegram_domain,Telegram"，
-    "RULE-SET,telegram_ip,Telegram"，
+    "RULE-SET,copilot,AIGC",
+    "RULE-SET,bard,AIGC",
+    "RULE-SET,openai,AIGC",
+    "RULE-SET,claude,AIGC",
+    "RULE-SET,steam,PROXY",
+    "RULE-SET,telegram_domain,Telegram",
+    "RULE-SET,telegram_ip,Telegram",
     "RULE-SET,google_domain,Google",
-    "RULE-SET,google_ip,Google"，
-    "RULE-SET,geolocation-!cn,PROXY"，
-    "RULE-SET,cn_domain,DIRECT"，
-    "RULE-SET,cn_ip,DIRECT"，
-    "MATCH,PROXY"，
+    "RULE-SET,google_ip,Google",
+    "RULE-SET,geolocation-!cn,PROXY",
+    "RULE-SET,cn_domain,DIRECT",
+    "RULE-SET,cn_ip,DIRECT",
+    "MATCH,PROXY",
   ];
   return config;
 }
