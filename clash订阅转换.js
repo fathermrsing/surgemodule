@@ -1,14 +1,5 @@
 function main(config) {
-  config["proxies"] = [
-    {
-        "name": "wechat-api",
-        "type": "socks5",
-        "server": "172.30.21.130",
-        "port": 10808,
-        "_subName": "自建服务",
-        "_subDisplayName": ""
-    }
-  ]
+ 
   config["proxy-groups"] = [
     {  
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",
