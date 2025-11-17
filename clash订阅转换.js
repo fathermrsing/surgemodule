@@ -15,7 +15,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "微信代理",
       type: "select",
-      proxies: ["AUTO","wechat-api AUTO"],
+      proxies: ["AUTO","wechat-api"],
     }, 
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",
@@ -66,7 +66,7 @@ function main(config) {
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       filter: "(?i)微信|wechat",
-      name: "wechat-api AUTO",
+      name: "wechat-api",
       type: "url-test",
       interval: 300,
     },
