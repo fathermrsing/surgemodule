@@ -109,6 +109,14 @@ function main(config) {
       format: "yaml",
       type: "http",
     },
+    wechatapi: {
+      url: "https://raw.githubusercontent.com/fathermrsing/surgemodule/refs/heads/master/wechatapi.yaml",
+      path: "./ruleset/wechatapi.yaml",
+      behavior: "classical",
+      interval: 86400,
+      format: "yaml",
+      type: "http",
+    },
     AWAvenue_Ads: {
       url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml",
       path: "./rule_provider/AWAvenue-Ads.yaml",
