@@ -8,14 +8,7 @@ function main(config) {
       proxies: ["tencentservice","DIRECT","HK", "SG", "JP", "US"],
       type: "url-test",
       interval: 300,
-    },
-    {  
-      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/txnews.png",      
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      name: "wechatproxy",
-      type: "select",
-      proxies: ["节点选择","tencentservice","DIRECT"],
-    }, 
+    },   
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",
       "include-all": true,
@@ -66,6 +59,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       filter: "(?i)微信|wechat",
       name: "tencentservice",
+      proxies: ["节点选择","HK", "SG", "JP", "US","DIRECT"],
       type: "url-test",
       interval: 300,
     },
