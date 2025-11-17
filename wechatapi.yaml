@@ -1,0 +1,11 @@
+# NAME: wechat api ip 代理
+# AUTHOR: zhangxiaomeng
+payload:
+  - DOMAIN-SUFFIX,wechat.com
+  - DOMAIN-SUFFIX,tenpay.com
+  - DOMAIN-SUFFIX,weixin.qq.com
+  - DOMAIN-SUFFIX,qpic.cn
+  - IP-CIDR,192.168.8.0/24
+  - IP-CIDR,43.135.106.8/32  
+  - IP-CIDR,120.233.17.190/32
+  - IP-CIDR,183.221.214.75/32
