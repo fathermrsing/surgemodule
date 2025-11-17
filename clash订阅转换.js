@@ -10,7 +10,10 @@ function main(config) {
     }
   ]
   config["proxy-groups"] = [
-    {          
+    {  
+      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",
+      "include-all": true,
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "wechat-api",
       type: "select",
       proxies: ["AUTO","wechat-api", "HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
