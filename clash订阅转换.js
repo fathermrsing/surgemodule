@@ -1,5 +1,10 @@
 function main(config) {
-  config["proxy-groups"] = [     
+  config["proxy-groups"] = [
+    {          
+      name: "wechat-api",
+      type: "select",
+      proxies: ["AUTO","wechat-api", "HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
+    },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",
       "include-all": true,
