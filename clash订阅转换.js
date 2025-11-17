@@ -245,7 +245,7 @@ function main(config) {
     "RULE-SET,geolocation-!cn,PROXY",
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
-    "RULE-SET,tencentservice,wechatproxy",
+    "RULE-SET,wechatapi,wechatproxy",
     "MATCH,PROXY",
   ];
   return config;
