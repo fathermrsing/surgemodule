@@ -71,6 +71,15 @@ function main(config) {
       interval: 300,
     },
     {
+      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/txnews.png",
+      "include-all": true,
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      filter: "(?i)微信|wechat",
+      name: "wechat-api AUTO",
+      type: "url-test",
+      interval: 300,
+    },
+    {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/JP.png",
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -195,59 +204,59 @@ function main(config) {
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
     claude: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml",
       path: "./ruleset/claude.yaml",
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
     bard: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml",
       path: "./ruleset/bard.yaml",
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
     openai: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml",
       path: "./ruleset/openai.yaml",
       behavior: "classical",
       interval: 86400,
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
     steam: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml",
       path: "./ruleset/steam.yaml",
       behavior: "classical",
-      interval: 86400，  
+      interval: 86400,  
       format: "yaml",
-      输入: "http",
-    }，
+      type: "http",
+    },
   });
 
   config["rules"] = [
     "RULE-SET,private,DIRECT",
     "RULE-SET,bing,AIGC",
-    "RULE-SET,copilot,AIGC"，
-    "RULE-SET,bard,AIGC"，
-    "RULE-SET,openai,AIGC"，
-    "RULE-SET,claude,AIGC"，
+    "RULE-SET,copilot,AIGC",
+    "RULE-SET,bard,AIGC",
+    "RULE-SET,openai,AIGC",
+    "RULE-SET,claude,AIGC",
     "RULE-SET,steam,PROXY",
     "RULE-SET,telegram_domain,Telegram",
-    "RULE-SET,telegram_ip,Telegram"，
-    "RULE-SET,google_domain,Google"，
-    "RULE-SET,google_ip,Google"，
-    "RULE-SET,geolocation-!cn,PROXY"，
+    "RULE-SET,telegram_ip,Telegram",
+    "RULE-SET,google_domain,Google",
+    "RULE-SET,google_ip,Google",
+    "RULE-SET,geolocation-!cn,PROXY",
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
-    "RULE-SET,wechatapi,微信代理"，
-    "MATCH,PROXY"，
+    "RULE-SET,wechatapi,微信代理",
+    "MATCH,PROXY",
   ];
   return config;
 }
