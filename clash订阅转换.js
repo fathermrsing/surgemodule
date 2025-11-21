@@ -7,13 +7,13 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "节点选择",
       type: "select",
-      proxies: [ "HK", "SG", "JP", "US","DIRECT","节点选择"],
+      proxies: [ "HK", "SG", "JP", "US","DIRECT","PROXY"]
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "PROXY",
-      proxies: ["tencentservice","DIRECT","HK", "SG", "JP", "US"],
+      proxies: ["DIRECT"],
       type: "url-test",
       interval: 300,
     }, 
