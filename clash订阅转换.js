@@ -88,9 +88,10 @@ function main(config) {
       interval: 300,
     },
     {
-      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png",      
+      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png",
+      "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      proxies: ["PROXY"],
+      proxies: ["PROXY", "HK", "SG", "JP", "US"],
       name: "GLOBAL",
       type: "select",
     }
