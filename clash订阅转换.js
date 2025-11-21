@@ -6,16 +6,16 @@ function main(config) {
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "节点选择",
-      type: "select",
+      type: "url-test",
       proxies: [ "HK", "SG", "JP", "US","DIRECT","指定节点"]
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       "include-all": true,
-      name: "指定节点",      
-      proxies: ["DIRECT"],
-      type: "url-test",
+      name: "指定节点",            
+      proxies: ["DIRECT"],      
+      type: "select",
       interval: 300,
     }, 
     {  
