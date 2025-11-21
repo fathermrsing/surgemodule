@@ -1,10 +1,18 @@
 function main(config) {
   
-  config["proxy-groups"] = [       
+  config["proxy-groups"] = [           
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",
+      "include-all": true,
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      name: "节点选择",
+      type: "select",
+      proxies: [ "HK", "SG", "JP", "US","DIRECT","节点选择"],
+    },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      name: "节点选择",
+      name: "PROXY",
       proxies: ["tencentservice","DIRECT","HK", "SG", "JP", "US"],
       type: "url-test",
       interval: 300,
@@ -16,14 +24,6 @@ function main(config) {
       type: "select",
       proxies: ["节点选择","tencentservice","DIRECT"],
     }, 
-    {
-      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",
-      "include-all": true,
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      name: "PROXY",
-      type: "select",
-      proxies: [ "HK", "SG", "JP", "US","DIRECT","节点选择"],
-    },    
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png",
       name: "AIGC",
