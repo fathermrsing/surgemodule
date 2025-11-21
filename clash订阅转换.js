@@ -100,7 +100,7 @@ function main(config) {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/CA.png",
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      filter: "(?i)CA|加拿大|🇨🇦",
+      filter: "(?i)^CA|加拿大|🇨🇦",
       name: "CA",
       type: "url-test",
       interval: 300,
