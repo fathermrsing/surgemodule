@@ -7,7 +7,7 @@ function main(config) {
       name: "PROXY",
       type: "url-test",
       interval: 300,      
-      proxies: [ "HK", "SG", "JP", "US","DIRECT","AllNodes"]
+      proxies: [ "HK", "SG", "JP", "US","CA","TW","DIRECT","AllNodes"]
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
@@ -34,13 +34,13 @@ function main(config) {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Telegram.png",
       name: "Telegram",
       type: "select",
-      proxies: ["HK", "SG", "JP", "US","DIRECT"],
+      proxies: ["HK", "SG", "JP", "US","CA","TW","DIRECT"],
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png",
       name: "Google",
       type: "select",
-      proxies: ["HK", "SG", "JP", "US","DIRECT"],
+      proxies: ["HK", "SG", "JP", "US","CA","TW","DIRECT"],
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png",
@@ -88,9 +88,27 @@ function main(config) {
       interval: 300,
     },
     {
+      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/CN.png",
+      "include-all": true,
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      filter: "(?i)TW|台湾",
+      name: "TW",
+      type: "url-test",
+      interval: 300,
+    },
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/CA.png",
+      "include-all": true,
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      filter: "(?i)CA|加拿大",
+      name: "CA",
+      type: "url-test",
+      interval: 300,
+    },
+    {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      proxies: ["PROXY", "HK", "SG", "JP", "US"],
+      proxies: ["PROXY", "HK", "SG", "JP", "US","CA","TW"],
       name: "GLOBAL",
       type: "select",
     }
