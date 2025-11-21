@@ -7,12 +7,13 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "节点选择",
       type: "select",
-      proxies: [ "HK", "SG", "JP", "US","DIRECT","PROXY"]
+      proxies: [ "HK", "SG", "JP", "US","DIRECT","指定节点"]
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      name: "PROXY",
+      "include-all": true,
+      name: "指定节点",      
       proxies: ["DIRECT"],
       type: "url-test",
       interval: 300,
@@ -22,7 +23,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "wechatproxy",
       type: "select",
-      proxies: ["节点选择","tencentservice","DIRECT"],
+      proxies: ["tencentservice","DIRECT","节点选择"],
     }, 
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png",
@@ -237,16 +238,16 @@ function main(config) {
     "RULE-SET,bard,AIGC",
     "RULE-SET,openai,AIGC",
     "RULE-SET,claude,AIGC",
-    "RULE-SET,steam,PROXY",
+    "RULE-SET,steam,指定节点",
     "RULE-SET,telegram_domain,Telegram",
     "RULE-SET,telegram_ip,Telegram",
     "RULE-SET,google_domain,Google",
     "RULE-SET,google_ip,Google",
-    "RULE-SET,geolocation-!cn,PROXY",
+    "RULE-SET,geolocation-!cn,指定节点",
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
     "RULE-SET,wechatapi,wechatproxy",
-    "MATCH,PROXY",
+    "MATCH,节点选择",
   ];
   return config;
 }
