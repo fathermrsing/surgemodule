@@ -7,14 +7,14 @@ function main(config) {
       name: "PROXY",
       type: "url-test",
       interval: 300,      
-      proxies: [ "HK", "SG", "JP", "US","CA","TW","DIRECT","AllNodes"]
+      proxies: [ "HK", "SG", "JP", "US","CA","TW","DIRECT"]
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       "include-all": true,
       name: "AllNodes",            
-      proxies: ["DIRECT"],      
+      proxies: ["DIRECT","HK"],
       type: "select",      
     }, 
     {  
