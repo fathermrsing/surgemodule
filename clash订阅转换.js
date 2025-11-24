@@ -1,22 +1,23 @@
 function main(config) {
   
-  config["proxy-groups"] = [           
-    {
-      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",      
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      name: "PROXY",
-      type: "url-test",
-      interval: 300,      
-      proxies: [ "HK", "SG", "JP", "US","CA","TW","DIRECT"]
-    },
+  config["proxy-groups"] = [    
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       "include-all": true,
-      name: "AllNodes",            
-      proxies: ["DIRECT","HK"],
+      name: "AllNodes",                  
+      type: "select",
+      proxies: []
+    },        
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",      
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      name: "PROXY",
       type: "select",      
-    }, 
+      interval: 300,      
+      proxies: [ "HK", "SG", "JP", "US","CA","TW","DIRECT","AllNodes"]
+    },
+    
     {  
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/txnews.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
