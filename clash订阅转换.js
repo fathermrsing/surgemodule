@@ -2,20 +2,44 @@ function main(config) {
   
   config["proxy-groups"] = [    
     {
-      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png",      
+      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       "include-all": true,
-      name: "AllNodes",                  
+      name: "节点选择",                  
+      type: "select",
+      proxies: ["自动选择","HK", "SG", "JP", "US","CA","TW","手动切换","DIRECT"]
+    },    
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",      
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      "include-all": true,
+      name: "自动选择",                  
+      type: "url-test",
+      tolerance: 50      
+    },
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png",      
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      "include-all": true,
+      name: "全球直连",                  
+      type: "select" ,
+      proxies: ["DIRECT","自动选择","节点选择"]
+    },
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png",      
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+      "include-all": true,
+      name: "手动切换",                  
       type: "select",
       proxies: ["DIRECT"]
-    },        
+    },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      name: "PROXY",
+      name: "漏网之鱼",
       type: "select",      
       interval: 300,      
-      proxies: [ "DIRECT","HK", "SG", "JP", "US","CA","TW","AllNodes"]
+      proxies: [ "DIRECT","自动选择","节点选择","HK", "SG", "JP", "US","CA","TW","手动切换"]
     },
     
     {  
@@ -23,7 +47,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "wechatproxy",
       type: "select",
-      proxies: ["tencentservice","DIRECT","PROXY"],
+      proxies: ["tencentservice","DIRECT","漏网之鱼"],
     }, 
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png",
@@ -108,10 +132,10 @@ function main(config) {
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png",      
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      proxies: ["PROXY", "HK", "SG", "JP", "US","CA","TW"],
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
       name: "GLOBAL",
       type: "select",
+      proxies: ["漏网之鱼", "HK", "SG", "JP", "US","CA","TW"],
     }
   ];
   if (!config['rule-providers']) {
@@ -126,6 +150,14 @@ function main(config) {
       format: "yaml",
       type: "http",
     },
+    LocalAreaNetwork: {
+      url: "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list",
+      path: "./ruleset/LocalAreaNetwork.list",
+      behavior: "classical",
+      interval: 86400,
+      format: "text",
+      type: "http",
+    },  
     wechatapi: {
       url: "https://raw.githubusercontent.com/fathermrsing/surgemodule/refs/heads/master/wechatapi.yaml",
       path: "./ruleset/wechatapi.yaml",
@@ -257,6 +289,7 @@ function main(config) {
   });
 
   config["rules"] = [
+    "RULE-SET,LocalAreaNetwork,全球直连",
     "RULE-SET,private,DIRECT",
     "RULE-SET,bing,AIGC",
     "RULE-SET,copilot,AIGC",
@@ -264,16 +297,17 @@ function main(config) {
     "RULE-SET,openai,AIGC",
     "RULE-SET,claude,AIGC",    
     "RULE-SET,kiro,AIGC",
-    "RULE-SET,steam,AllNodes",
+    "RULE-SET,steam,手动切换",
     "RULE-SET,telegram_domain,Telegram",
     "RULE-SET,telegram_ip,Telegram",
     "RULE-SET,google_domain,Google",
     "RULE-SET,google_ip,Google",
-    "RULE-SET,geolocation-!cn,AllNodes",
+    "RULE-SET,geolocation-!cn,手动切换",
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
     "RULE-SET,wechatapi,wechatproxy",
-    "MATCH,PROXY",
+    "GEOIP,CN,全球直连"
+    "MATCH,漏网之鱼",
   ];
   return config;
 }
