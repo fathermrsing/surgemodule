@@ -304,7 +304,7 @@ function main(config) {
 
   config["rules"] = [
     "RULE-SET,LocalAreaNetwork,全球直连",
-    "RULE-SET,AWAvenue_Ads,广告拦截"
+    "RULE-SET,AWAvenue_Ads,广告拦截",
     "RULE-SET,private,DIRECT",
     "RULE-SET,bing,AIGC",
     "RULE-SET,copilot,AIGC",
