@@ -15,7 +15,7 @@ function main(config) {
       name: "PROXY",
       type: "select",      
       interval: 300,      
-      proxies: [ "HK", "SG", "JP", "US","CA","TW","DIRECT","AllNodes"]
+      proxies: [ "DIRECT","HK", "SG", "JP", "US","CA","TW","AllNodes"]
     },
     
     {  
