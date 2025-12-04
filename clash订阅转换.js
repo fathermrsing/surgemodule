@@ -70,7 +70,7 @@ function main(config) {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png",
       name: "Google",
       type: "select",
-      proxies: ["HK", "SG", "JP", "US","CA","TW","DIRECT"],
+      proxies: ["SG", "JP", "US","CA","TW","DIRECT"],
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png",
