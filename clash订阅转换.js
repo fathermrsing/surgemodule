@@ -55,7 +55,7 @@ function main(config) {
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/SG.png",
       "include-all": true,
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|xcdeveloper",
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|xcdevelop",
       filter: "(?i)新加坡|Singapore|^SG|🇸🇬",
       name: "SG",
       type: "url-test",
@@ -222,6 +222,14 @@ function main(config) {
       format: "yaml",
       type: "http",
     },
+    kiro:{
+      url: "https://raw.githubusercontent.com/fathermrsing/surgemodule/refs/heads/master/ai.yaml",
+      path: "./ruleset/kiro.yaml",
+      behavior: "classical",
+      interval: 86400,
+      format: "yaml",
+      type: "http",
+    },
     bard: {
       url: "https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml",
       path: "./ruleset/bard.yaml",
@@ -254,7 +262,8 @@ function main(config) {
     "RULE-SET,copilot,AIGC",
     "RULE-SET,bard,AIGC",
     "RULE-SET,openai,AIGC",
-    "RULE-SET,claude,AIGC",
+    "RULE-SET,claude,AIGC",    
+    "RULE-SET,kiro,AIGC",
     "RULE-SET,steam,AllNodes",
     "RULE-SET,telegram_domain,Telegram",
     "RULE-SET,telegram_ip,Telegram",
