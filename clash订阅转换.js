@@ -4,7 +4,7 @@ function main(config) {
     {
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
-      name: "节点选择",
+      name: "节点选择(按地区)",
       type: "select",
       proxies: ["自动选择","HK", "SG", "JP", "US","CA","TW","手动切换","DIRECT"]
     }, 
@@ -29,7 +29,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
       name: "全球直连",                  
       type: "select" ,
-      proxies: ["DIRECT","自动选择","节点选择"]
+      proxies: ["DIRECT","自动选择","节点选择(按地区)"]
     },
     
     {
@@ -38,7 +38,7 @@ function main(config) {
       name: "漏网之鱼",
       type: "select",      
       interval: 300,      
-      proxies: [ "DIRECT","自动选择","节点选择","HK", "SG", "JP", "US","CA","TW","手动切换"]
+      proxies: [ "DIRECT","自动选择","节点选择(按地区)","HK", "SG", "JP", "US","CA","TW","手动切换"]
     },    
     {  
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png",      
@@ -140,7 +140,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
       name: "GLOBAL",
       type: "select",
-      proxies: ["漏网之鱼", "HK", "SG", "JP", "US","CA","TW","广告拦截"],
+      proxies: ["节点选择(按地区)","手动切换","自动选择","漏网之鱼", "HK", "SG", "JP", "US","CA","TW","广告拦截"],
     }
   ];
   if (!config['rule-providers']) {
@@ -321,7 +321,7 @@ function main(config) {
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
     "RULE-SET,wechatapi,wechatproxy",
-    "RULE-SET,ProxyGFWlist,节点选择",
+    "RULE-SET,ProxyGFWlist,节点选择(按地区)",
     "GEOIP,CN,全球直连",
     "MATCH,漏网之鱼"
   ];
