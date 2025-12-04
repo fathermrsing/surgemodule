@@ -3,8 +3,7 @@ function main(config) {
   config["proxy-groups"] = [    
     {
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png",      
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      "include-all": true,
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
       name: "节点选择",                  
       type: "select",
       proxies: ["自动选择","HK", "SG", "JP", "US","CA","TW","手动切换","DIRECT"]
