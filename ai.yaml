@@ -6,4 +6,6 @@
 # DOMAIN-SUFFIX: 2
 # TOTAL: 3
 payload:  
-  - DOMAIN-SUFFIX,kiro.dev  
+  - DOMAIN-SUFFIX,kiro.dev
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,linux.do
