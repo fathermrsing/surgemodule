@@ -7,7 +7,7 @@ function main(config) {
       "include-all": true,
       name: "AllNodes",                  
       type: "select",
-      proxies: []
+      proxies: ["DIRECT"]
     },        
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",      
