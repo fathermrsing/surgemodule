@@ -34,7 +34,7 @@ function main(config) {
     },
     
     {
-      icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",      
+      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "漏网之鱼",
       type: "select",      
@@ -150,6 +150,14 @@ function main(config) {
       format: "yaml",
       type: "http",
     },
+    ProxyGFWlist: {
+      url: "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list",
+      path: "./ruleset/ProxyGFWlist.list",
+      behavior: "classical",
+      interval: 86400,
+      format: "text",
+      type: "http",
+    },    
     LocalAreaNetwork: {
       url: "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list",
       path: "./ruleset/LocalAreaNetwork.list",
@@ -306,6 +314,7 @@ function main(config) {
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
     "RULE-SET,wechatapi,wechatproxy",
+    "RULE-SET,ProxyGFWlist,节点选择",
     "GEOIP,CN,全球直连",
     "MATCH,漏网之鱼"
   ];
