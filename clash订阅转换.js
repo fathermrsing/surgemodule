@@ -8,23 +8,7 @@ function main(config) {
       name: "节点选择",                  
       type: "select",
       proxies: ["自动选择","HK", "SG", "JP", "US","CA","TW","手动切换","DIRECT"]
-    },    
-    {
-      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",      
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      "include-all": true,
-      name: "自动选择",                  
-      type: "url-test",
-      tolerance: 50      
-    },
-    {
-      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png",      
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      "include-all": true,
-      name: "全球直连",                  
-      type: "select" ,
-      proxies: ["DIRECT","自动选择","节点选择"]
-    },
+    }, 
     {
       icon: "https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -32,7 +16,23 @@ function main(config) {
       name: "手动切换",                  
       type: "select",
       proxies: ["DIRECT"]
+    },   
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",      
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|wechat",
+      "include-all": true,
+      name: "自动选择",                  
+      type: "url-test",
+      tolerance: 50
     },
+    {
+      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png",      
+      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
+      name: "全球直连",                  
+      type: "select" ,
+      proxies: ["DIRECT","自动选择","节点选择"]
+    },
+    
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -306,8 +306,8 @@ function main(config) {
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
     "RULE-SET,wechatapi,wechatproxy",
-    "GEOIP,CN,全球直连"
-    "MATCH,漏网之鱼",
+    "GEOIP,CN,全球直连",
+    "MATCH,漏网之鱼"
   ];
   return config;
 }
