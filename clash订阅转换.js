@@ -14,7 +14,7 @@ function main(config) {
       "include-all": true,
       name: "手动切换",                  
       type: "select",
-      proxies: ["DIRECT"]
+      proxies: []
     },   
     {
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",      
