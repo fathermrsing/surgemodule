@@ -38,7 +38,7 @@ function main(config) {
       name: "漏网之鱼",
       type: "select",      
       interval: 300,      
-      proxies: [ "DIRECT","自动选择","节点选择(按地区)","HK", "SG", "JP", "US","CA","TW","手动切换"]
+      proxies: ["自动选择","节点选择(按地区)","HK", "SG", "JP", "US","CA","TW","手动切换"]
     },    
     {  
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png",      
@@ -303,7 +303,7 @@ function main(config) {
   });
 
   config["rules"] = [
-    "RULE-SET,LocalAreaNetwork,全球直连",
+    "RULE-SET,LocalAreaNetwork,全球直连",    
     "RULE-SET,AWAvenue_Ads,广告拦截",
     "RULE-SET,private,DIRECT",
     "RULE-SET,bing,AIGC",
@@ -311,17 +311,17 @@ function main(config) {
     "RULE-SET,bard,AIGC",
     "RULE-SET,openai,AIGC",
     "RULE-SET,claude,AIGC",    
-    "RULE-SET,kiro,AIGC",
+    "RULE-SET,kiro,AIGC", 
     "RULE-SET,steam,手动切换",
     "RULE-SET,telegram_domain,Telegram",
     "RULE-SET,telegram_ip,Telegram",
     "RULE-SET,google_domain,Google",
     "RULE-SET,google_ip,Google",
-    "RULE-SET,geolocation-!cn,手动切换",
+    "RULE-SET,ProxyGFWlist,节点选择(按地区)",    
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
-    "RULE-SET,wechatapi,wechatproxy",
-    "RULE-SET,ProxyGFWlist,节点选择(按地区)",
+    "RULE-SET,geolocation-!cn,手动切换",
+    "RULE-SET,wechatapi,wechatproxy",        
     "GEOIP,CN,全球直连",
     "MATCH,漏网之鱼"
   ];
