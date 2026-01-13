@@ -12,6 +12,7 @@ payload:
   - DOMAIN-SUFFIX,macked.app
   - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,zerotier.com
+  - PROCESS-NAME,claude
   # Homebrew 核心 API 和元数据 (你报错的那个域名属于这里)
   - DOMAIN-SUFFIX,brew.sh
   
