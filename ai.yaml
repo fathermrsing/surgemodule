@@ -19,6 +19,7 @@ payload:
   - PROCESS-NAME,claude
   - PROCESS-NAME,Antigravity
   - PROCESS-NAME,Antigravity Helper
+  - PROCESS-NAME,Antigravity Helper (Plugin)
   # Homebrew 核心 API 和元数据 (你报错的那个域名属于这里)
   - DOMAIN-SUFFIX,brew.sh
   - DOMAIN-SUFFIX,arc.net
