@@ -1,12 +1,11 @@
 function main(config) {
-  
   config["proxy-groups"] = [    
     {
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
       name: "节点选择(按地区)",
       type: "select",
-      proxies: ["自动选择","HK", "SG", "JP", "US","CA","TW","手动切换","DIRECT"]
+      proxies: ["HK", "SG", "JP", "US","CA","TW","手动切换","DIRECT"]
     }, 
     {
       icon: "https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png",      
@@ -16,20 +15,20 @@ function main(config) {
       type: "select",
       proxies: []
     },   
-    {
-      icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",      
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|wechat",
-      "include-all": true,
-      name: "自动选择",                  
-      type: "url-test",
-      tolerance: 50
-    },
+    // {
+    //   icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png",      
+    //   "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|wechat",
+    //   "include-all": true,
+    //   name: "自动选择",                  
+    //   type: "url-test",
+    //   tolerance: 50
+    // },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png",      
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
       name: "全球直连",                  
       type: "select" ,
-      proxies: ["DIRECT","自动选择","节点选择(按地区)"]
+      proxies: ["DIRECT","节点选择(按地区)"]
     },
     
     {
@@ -38,7 +37,7 @@ function main(config) {
       name: "漏网之鱼",
       type: "select",      
       interval: 300,      
-      proxies: ["自动选择","节点选择(按地区)","HK", "SG", "JP", "US","CA","TW","手动切换"]
+      proxies: ["节点选择(按地区)","HK", "SG", "JP", "US","CA","TW","手动切换"]
     },    
     {  
       icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png",      
@@ -140,7 +139,7 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",      
       name: "GLOBAL",
       type: "select",
-      proxies: ["节点选择(按地区)","手动切换","自动选择","漏网之鱼", "HK", "SG", "JP", "US","CA","TW","广告拦截"],
+      proxies: ["节点选择(按地区)","手动切换","漏网之鱼", "HK", "SG", "JP", "US","CA","TW","广告拦截"],
     }
   ];
   if (!config['rule-providers']) {
@@ -302,6 +301,18 @@ function main(config) {
     },
   });
 
+  config["tun"] = {
+    "enable":true,
+    "stack": "mixed",
+    "auto-route": true,
+    "auto-detect-interface": true,
+    "exclude-interface":["Tailscale"],
+    "route-exclude-address":[
+      "100.88.54.152/32",
+      "100.78.156.100/32"
+    ]
+  };
+  
   config["rules"] = [
     "RULE-SET,LocalAreaNetwork,全球直连",    
     "RULE-SET,AWAvenue_Ads,广告拦截",
