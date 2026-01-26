@@ -20,6 +20,10 @@ payload:
   - PROCESS-NAME,Antigravity
   - PROCESS-NAME,Antigravity Helper
   - PROCESS-NAME,Antigravity Helper (Plugin)
+  - PROCESS-PATH,/Applications/Antigravity.app/Contents/MacOS/Electron
+  - PROCESS-PATH,/Applications/Antigravity Tools.app/Contents/MacOS/antigravity_tools
+  - PROCESS-PATH,/Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper (Plugin).app/Contents/MacOS/Antigravity Helper (Plugin)
+  - PROCESS-PATH,/Applications/Antigravity.app/Contents/Resources/app/extensions/antigravity/bin/language_server_macos_arm
   - PROCESS-NAME,language_server_macos_arm
   - PROCESS-NAME,node
   # Homebrew 核心 API 和元数据 (你报错的那个域名属于这里)
