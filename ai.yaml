@@ -16,6 +16,7 @@ payload:
   - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,zerotier.com
   - DOMAIN-SUFFIX,amazoncognito.com
+  - DOMAIN-SUFFIX,npmjs.org
   - PROCESS-NAME,claude
   - PROCESS-NAME,Antigravity
   - PROCESS-NAME,Antigravity Helper
