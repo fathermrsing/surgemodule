@@ -35,6 +35,7 @@ payload:
   - DOMAIN-SUFFIX,github.com
   - DOMAIN-SUFFIX,github.io
   - DOMAIN-SUFFIX,githubassets.com
+  - DOMAIN-SUFFIX,openclaw.ai
   
   # 资源文件 (Raw 文件、图片、头像等)
   - DOMAIN-SUFFIX,githubusercontent.com
