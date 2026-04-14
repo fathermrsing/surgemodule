@@ -21,6 +21,8 @@ payload:
   - DOMAIN-SUFFIX,npmjs.org
   - PROCESS-NAME,claude
   - PROCESS-NAME,Cursor
+  - PROCESS-NAME,Cursor Helper
+  - PROCESS-NAME,Cursor Helper (Plugin)
   - PROCESS-NAME,Antigravity
   - PROCESS-NAME,Antigravity Helper
   - PROCESS-NAME,Antigravity Helper (Plugin)
