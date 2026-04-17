@@ -19,6 +19,7 @@ payload:
   - DOMAIN-SUFFIX,amazoncognito.com
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,npmjs.org
+  - DOMAIN-SUFFIX,npmjs.com
   - PROCESS-NAME,claude
   - PROCESS-NAME,Cursor
   - PROCESS-NAME,Cursor Helper
