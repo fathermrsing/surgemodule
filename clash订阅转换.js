@@ -267,9 +267,9 @@ function main(config) {
       format: "yaml",
       type: "http",
     },
-    kiro:{
+    ai:{
       url: "https://raw.githubusercontent.com/fathermrsing/surgemodule/refs/heads/master/ai.yaml",
-      path: "./ruleset/kiro.yaml",
+      path: "./ruleset/ai.yaml",
       behavior: "classical",
       interval: 86400,
       format: "yaml",
@@ -322,7 +322,7 @@ function main(config) {
     "RULE-SET,bard,AIGC",
     "RULE-SET,openai,AIGC",
     "RULE-SET,claude,AIGC",    
-    "RULE-SET,kiro,AIGC", 
+    "RULE-SET,ai,AIGC", 
     "RULE-SET,steam,手动切换",
     "RULE-SET,telegram_domain,Telegram",
     "RULE-SET,telegram_ip,Telegram",
