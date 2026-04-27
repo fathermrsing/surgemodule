@@ -17,6 +17,7 @@ payload:
   - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,cursor.sh
   - DOMAIN-SUFFIX,zerotier.com
+  - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,amazoncognito.com
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,npmjs.org
