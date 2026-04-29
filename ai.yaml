@@ -16,6 +16,7 @@ payload:
   - DOMAIN-SUFFIX,macked.app
   - DOMAIN-SUFFIX,tailscale.com
   - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN,api.enjoyit.dpdns.org
   - DOMAIN-SUFFIX,zerotier.com
   - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,amazoncognito.com
